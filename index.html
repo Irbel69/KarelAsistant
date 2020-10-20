@@ -1,0 +1,35 @@
+<html>
+    <head>
+
+    </head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="home.js"></script>
+    <body>
+        <input id=custom type="text">
+        <div class="center" align=center>
+            <button onclick="chooseDirection()">Choose Direction</button><br><br>
+            <button onclick="teleport();">Teleport</button>
+            <button onclick="custom();">Custom</button><br>
+            <button class="centerButton" onclick="up()">Up</button><br>
+            <button class="centerButton" onclick="left()">Left</button>
+            <button class="centerButton" onclick="right()">Right</button><br>
+            <button class="centerButton" onclick="down()">Down</button>
+        </div><br>
+        <h1>Code:</h1>
+        <p>function m(){<br>
+            if(beepersPresent()){pickBeeper();}<br>
+            if(trayPresent()){if(trayIsMine()){if(beepersInBag()){while(trayNotFull()){putBeeperInTray();}}}}<br>
+            if(frontIsBlocked()){if(isRemovableWall()){removeWall();}}<br>
+            if(exitPresent()){exit();}<br>
+            move();<br>
+            if(beepersPresent()){pickBeeper();}<br>
+            if(trayPresent()){if(trayIsMine()){if(beepersInBag()){while(trayNotFull()){putBeeperInTray();}}}}<br>
+            if(frontIsBlocked()){if(isRemovableWall()){removeWall();}}<br>
+            if(exitPresent()){exit();}<br>
+        }
+        </p>
+        function main(){
+        <p id="code"></p>
+        }
+    </body>
+</html>

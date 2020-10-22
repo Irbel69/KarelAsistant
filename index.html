@@ -7,49 +7,57 @@
     <script type="text/javascript" src="home.js"></script>
     <body>
         <div class="header">
-            <h1 class="h1" align="center"><a class="h1" href="./index.html">KAREL ASSISTANT</a></h1>
-            <a class="button header-button" href="index.html"><i class="gg-sync"></i></a>
+            <img align="center" class="logo" src="img/codelearn.png" alt="logo">
+            <h1 class="h1" align="center"> <a class="h1" href="./index.html">KAREL ASSISTANT</a></h1>
+
+
+            <div class="links">
+                <a class="h1 link" href="#">MARCEL</a> <a class="h1 link" href="#">XAVI</a>
+            </div>
+
         </div>
         <main>
 
 
 
             <div class="funct">
-                <div id="textarea" contenteditable="true" onfocus="inputs=false" onblur="inputs=true">
-                    function m(){<br>
-                    if(beepersPresent()){pickBeeper();}<br>
-                    if(trayPresent()){while(trayNotFull()){putBeeperInTray();}}<br>
-                    if(exitPresent()){exit();}<br>
-                    move();<br>
-                    if(beepersPresent()){pickBeeper();}<br>
-                    if(trayPresent()){while(trayNotFull()){putBeeperInTray();}}<br>
-                    if(exitPresent()){exit();}<br>
-                    }<br><br>
+                <div class="textarea-container" id="textarea-container">
+                    <div class="code-area">
+                        <div class="textarea" id="code" contenteditable="true" onfocus="inputs=false" onblur="inputs=true">
+                            function m(){<br>
+                            if(beepersPresent()){pickBeeper();}<br>
+                            if(trayPresent()){while(trayNotFull()){putBeeperInTray();}}<br>
+                            if(exitPresent()){exit();}<br>
+                            move();<br>
+                            if(beepersPresent()){pickBeeper();}<br>
+                            if(trayPresent()){while(trayNotFull()){putBeeperInTray();}}<br>
+                            if(exitPresent()){exit();}<br>
+                            }<br><br>
 
-                    function main(){<br>
-                    <p id="code"></p>
+                            function main(){<br>
 
-                    }
-
-
+                        </div>
+                        <p class="clau">}</p>
+                    </div>
+                    <button class="button copy" onclick="copy('code')"><img src="img/copy.png" alt="copy"></button>
                 </div>
 
 
                 <div class="center" align="center">
-                    <div class="top-button">
-                        <button class="button" onclick="chooseDirection()">Choose Direction</button>
-                        <button class="button" onclick="teleport();">Teleport</button>
+                    <div class="top-buttons">
+                        <button class="button top-button" onclick="chooseDirection()">Choose Direction</button>
+                        <button class="button top-button" onclick="teleport();">Teleport</button>
                     </div>
                     <div class="center-button">
                         <button class="centerButton button"><img src="img/up-arrow.png" class="centerButton button down-button" onclick="up()"></button><br>
                         <div class="left-right-buttons">
-                        <button class="centerButton button"><img src="img/left-arrow.png" class="centerButton button down-button" onclick="left()"></button>
-                        <button class="centerButton button"><img src="img/right-arrow.png" class="centerButton button down-button" onclick="right()"></button><br>
+                            <button class="centerButton button"><img src="img/left-arrow.png" class="centerButton button down-button" onclick="left()"></button>
+                            <button class="centerButton button"><img src="img/right-arrow.png" class="centerButton button down-button" onclick="right()"></button><br>
                         </div>
                         <button class="centerButton button"><img src="img/down-arrow.png" class="centerButton button down-button" onclick="down()"></button>
                     </div>
                 </div>
-               
+
             </div>
 
         </main>

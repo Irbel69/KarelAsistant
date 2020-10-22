@@ -13,5 +13,34 @@ NOVEDADES v2
 
 -fondo gris añadido
 
--textarea arreglat(lo que escribias no se guardaba)
+-textarea arreglado(lo que escribias no se guardaba)
 
+
+V2.1
+
+Fallos:
+
+-boton copiar
+
+
+Añadido:
+
+-Nuevo diseño(no acabado)
+
+-hovers en botones
+
+-boton copiar añadido(no funcional)
+
+-claudator final añadido
+
+-fondos opcionales
+
+ideas:
+
+-fondo random
+
+-crear un compilador de karel
+
+-agregar algoritmo para encontrar beepers apartir del codigo html
+
+-simulacion visual del algoritmo

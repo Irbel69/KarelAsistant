@@ -90,12 +90,28 @@ document.onkeydown = function(e) {
 function copy(id_elemento) {
 
     // Crea un campo de texto "oculto"
-    var aux = document.createElement("input");
+    var aux = document.createElement("textarea");
+    var code = document.getElementById(id_elemento).innerHTML + "}";
+    var finalcode = "";
+    let write = true;
+
+    for(var i = 0; i<code.length; i++){
+        if(code[i] == '<' && code[i+1] == 'b' && code[i+2] == 'r'){
+            write = false;
+            //finalcode += '<div>'; o \n
+        }
+
+        if(write)
+            finalcode += code[i];
+
+        if(code[i] == '>' && !write)
+            write= true;
+
+    }
 
     // Asigna el contenido del elemento especificado al valor del campo
-    aux.setAttribute("value", document.getElementById(id_elemento).innerHTML);
-    aux.innerHTML += "}"; // no funciona
-    
+    aux.setAttribute("value", finalcode);
+
     // Añade el campo a la página
     document.body.appendChild(aux);
 
@@ -110,9 +126,30 @@ function copy(id_elemento) {
 
 }
 
+function copy2(id_elemento){
 
+    alert(document.getElementById(id_elemento).innerHTML + "}");
 
+    var aux = document.createElement("textarea");
 
+    // Asigna el contenido del elemento especificado al valor del campo
+    aux.setAttribute("value", document.getElementById(id_elemento).innerHTML + "}");
+    //aux.innerHTML += "}";  //no funciona
+
+    // Añade el campo a la página
+    document.body.appendChild(aux);
+
+    // Selecciona el contenido del campo
+    aux.select();
+
+    // Copia el texto seleccionado
+    document.execCommand("copy");
+
+    // Elimina el campo de la página
+    document.body.removeChild(aux);
+
+    alert("codigo copiado con exito!");
+}
 
 
 

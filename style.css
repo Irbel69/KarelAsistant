@@ -205,6 +205,10 @@ main{
     position: relative;
     background: #d8d8d8;
     display: block;
+    min-width: 500px;
+    min-height: 50px;
+    max-width: 500px;
+
 
 
 }
@@ -219,18 +223,18 @@ main{
     margin: 30px;
     border-radius: 4px;
     padding: 1px 10px 10px 10px;
-    width: 100%;
+    width: calc(100% - 75px);
     height: 100%;
-    
     padding-top: 50px;
     position: relative;
     font-family: monospace;
     
 
 }
+
 .textarea::before{
     content: "Code:";
-    font-family: cursive;
+    font-family: sans-serif;
     font-size: 30px;
     font-weight: 700;
     position: absolute;
@@ -255,6 +259,8 @@ main{
 .copy:hover{
     background: #efefef;
 }
+
+
 
 
 

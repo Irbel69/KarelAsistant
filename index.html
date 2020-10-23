@@ -24,22 +24,22 @@
                 <div class="textarea-container" id="textarea-container">
                     <div class="code-area">
                         <div class="textarea" id="code" contenteditable="true" onfocus="inputs=false" onblur="inputs=true">
-                            function m(){<br>
-                            if(beepersPresent()){pickBeeper();}<br>
-                            if(trayPresent()){while(trayNotFull()){putBeeperInTray();}}<br>
-                            if(exitPresent()){exit();}<br>
-                            move();<br>
-                            if(beepersPresent()){pickBeeper();}<br>
-                            if(trayPresent()){while(trayNotFull()){putBeeperInTray();}}<br>
-                            if(exitPresent()){exit();}<br>
-                            }<br><br>
+function m(){<br>
+     if(beepersPresent()){ pickBeeper(); }<br>
+     if(trayPresent()){ while(trayNotFull()){ putBeeperInTray(); }}<br>
+     if(exitPresent()){ exit(); }<br>
+     move();<br>
+     if(beepersPresent()){ pickBeeper(); }<br>
+     if(trayPresent()){ while(trayNotFull()){ putBeeperInTray(); }}<br>
+     if(exitPresent()){ exit(); }<br>
+     }<br><br>
 
-                            function main(){<br>
+  function main(){ <br>
 
                         </div>
-                        <p class="clau">}</p>
+                        <p class="clau"> }</p>
                     </div>
-                    <button class="button copy" onclick="copy('code')"><img src="img/copy.png" alt="copy"></button>
+                    <button class="button copy" id="copy" onclick="copy('code');" type="button"><img src="img/copy.png" alt="copy"></button>
                 </div>
 
 
